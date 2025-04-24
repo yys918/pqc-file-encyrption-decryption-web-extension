@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Post-Quantum File Encryption",
+  "version": "1.0",
+  "description": "Encrypt and decrypt files using post-quantum cryptography",
+  "permissions": [
+    "activeTab"
+  ],
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [{
+    "resources": ["lib/*"],
+    "matches": ["<all_urls>"]
+  }],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self' 'wasm-unsafe-eval'; object-src 'self'"
+  }
+} 
