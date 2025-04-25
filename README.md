@@ -15,7 +15,7 @@ A Chrome-based extension that allows users to encrypt and decrypt files using po
 1. Clone this repository
 2. Open Chrome and go to `chrome://extensions/`
 3. Enable "Developer mode" in the top right corner
-4. Click "Load unpacked" and select the extension directory
+4. Click "Load unpacked" and select the extension directory. *Only the folder that contains the files
 5. The extension icon should appear in your Chrome toolbar
 
 ## Usage
