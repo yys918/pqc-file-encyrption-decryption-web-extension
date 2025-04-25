@@ -1,6 +1,6 @@
 # Post-Quantum File Encryptor Chrome Extension
 
-A Chrome extension that allows users to encrypt and decrypt files using post-quantum cryptography (Kyber algorithm).
+A Chrome-based extension that allows users to encrypt and decrypt files using post-quantum cryptography.
 
 ## Features
 
@@ -34,7 +34,7 @@ A Chrome extension that allows users to encrypt and decrypt files using post-qua
 
 1. Click the extension icon in your Chrome toolbar
 2. Select the "Decrypt" tab
-3. Upload both the encrypted file and the shared key
+3. Upload both the encrypted file and the corresponding shared key
 4. Click "Decrypt File"
 5. The decrypted file will be downloaded with its original name
 
