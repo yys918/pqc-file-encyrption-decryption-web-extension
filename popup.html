@@ -61,17 +61,109 @@
             background-color: #f2dede;
             color: #a94442;
         }
+        .variant-selector {
+            margin: 10px 0;
+            padding: 10px;
+            background-color: #f8f9fa;
+            border-radius: 5px;
+            position: relative;
+        }
+        .variant-selector select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            background-color: white;
+            font-size: 14px;
+        }
+        .variant-selector label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: bold;
+            color: #333;
+        }
+        .info-icon {
+            display: inline-block;
+            width: 16px;
+            height: 16px;
+            background-color: #2196F3;
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 16px;
+            font-size: 12px;
+            cursor: pointer;
+            margin-left: 5px;
+            position: relative;
+        }
+        .info-popup {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            padding: 10px;
+            width: 300px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+            z-index: 1000;
+            margin-top: 5px;
+        }
+        .info-popup.show {
+            display: block;
+        }
+        .header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 1.5em;
+        }
+        .user-guide-btn {
+            background-color: #2196F3;
+            font-size: 12px;
+            padding: 6px 12px;
+        }
+        .user-guide-btn:hover {
+            background-color: #1976D2;
+        }
+        .select-container {
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h1>Post-Quantum File Encryption</h1>
+        <div class="header">
+            <h1>Post-Quantum File Encryption</h1>
+            <button class="user-guide-btn" id="userGuideBtn">User Guide</button>
+        </div>
         
         <div class="progress-container">
             <div class="progress-bar">
                 <div class="progress-fill"></div>
             </div>
             <div class="progress-text">Ready</div>
+        </div>
+
+        <!-- Kyber Variant Selection -->
+        <div class="variant-selector">
+            <label for="kyberVariant">Select Kyber Variant:</label>
+            <div class="select-container">
+                <select id="kyberVariant">
+                    <option value="kyber-768" selected>Kyber-768 (Default, NIST Level 3)</option>
+                    <option value="kyber-512">Kyber-512 (NIST Level 1)</option>
+                    <option value="kyber-1024">Kyber-1024 (NIST Level 5)</option>
+                </select>
+                <div class="info-icon" id="infoIcon">i</div>
+                <div class="info-popup" id="variantInfo"></div>
+            </div>
         </div>
 
         <!-- Encryption Section -->
