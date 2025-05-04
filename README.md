@@ -23,10 +23,11 @@ A Chrome-based extension that allows users to encrypt and decrypt files using po
 ### Encrypting a File
 
 1. Click the extension icon in your Chrome toolbar
-2. Select the "Encrypt" tab
-3. Click "Choose File" and select the file you want to encrypt
-4. Click "Encrypt File"
-5. Two files will be downloaded:
+2. Select which kyber variant to be used
+3. Go to the "Encrypt" tab
+4. Click "Choose File" and select the file you want to encrypt
+5. Click "Encrypt File"
+6. Two files will be downloaded:
    - The encrypted file (with .encrypted extension)
    - The shared key (with .key extension)
 
